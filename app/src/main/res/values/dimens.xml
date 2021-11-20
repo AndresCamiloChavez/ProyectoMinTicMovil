@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardCornerRadius">7dp</dimen>
+    <dimen name="cardElevation">10dp</dimen>
+    <dimen name="textSizeContent">17dp</dimen>
+    <dimen name="itemCommentScore">14dp</dimen>
+    <dimen name="textSizeTitle">30dp</dimen>
+    <dimen name="textSizeNameProduct">26dp</dimen>
+    <dimen name="textSizePriceProduct">19dp</dimen>
+</resources>

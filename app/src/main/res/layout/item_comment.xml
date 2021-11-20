@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:paddingHorizontal="10dp"
+                android:id="@+id/tvItemCommentUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeContent"
+                android:gravity="left|top"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvItemCommentScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/itemCommentScore"
+                android:gravity="center|top"
+                android:text="5/5"/>
+
+        </LinearLayout>
+        <TextView
+            android:paddingLeft="5dp"
+            android:id="@+id/tvItemCommentsComemnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the l"
+            android:textSize="@dimen/textSizeContent"
+            android:layout_gravity="left|top"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
