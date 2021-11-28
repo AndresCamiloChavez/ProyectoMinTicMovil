@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroLibre">
         <activity
+            android:name=".view.ui.activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
             android:name=".view.ui.activities.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -21,11 +28,13 @@
         <activity
             android:name=".view.ui.activities.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 

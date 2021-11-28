@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import com.example.agrolibre.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +38,14 @@ class AdminFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_admin, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btnEditProfile = view.findViewById<Button>(R.id.btnEditProfile)
+        btnEditProfile?.setOnClickListener{
+            findNavController().navigate(R.id.adminDetailFragmentDialog, null)
+        }
     }
 
     companion object {

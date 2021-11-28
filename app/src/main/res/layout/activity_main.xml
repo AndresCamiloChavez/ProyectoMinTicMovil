@@ -20,7 +20,6 @@
             android:layout_above="@id/btnvMenu"
             app:navGraph="@navigation/nav_graph"
             app:defaultNavHost="true"/>
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/btnvMenu"
             android:layout_width="match_parent"

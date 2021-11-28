@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navHomeFragment"
+        android:id="@+id/homeFragment"
         android:title="Inicio"
         android:icon="@drawable/ic_baseline_home_24"
         ></item>
     <item
-        android:id="@+id/navOrderFragment"
+        android:id="@+id/productsFragment"
         android:title="Mi pedido"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         ></item>
     <item
-        android:id="@+id/navCommentsFragment"
+        android:id="@+id/commentsFragment"
         android:title="Comentarios"
         android:icon="@drawable/ic_baseline_insert_comment_24"
         ></item>
     <item
-        android:id="@+id/navAdminFragment"
+        android:id="@+id/adminFragment"
         android:title="Mi cuenta"
         android:icon="@drawable/ic_baseline_person_pin_24"
         ></item>

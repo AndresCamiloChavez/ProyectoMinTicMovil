@@ -6,7 +6,7 @@
     tools:context=".view.ui.fragments.OrderFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvOrder"
+        android:id="@+id/rvProducts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <RelativeLayout

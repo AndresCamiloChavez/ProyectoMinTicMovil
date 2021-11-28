@@ -34,9 +34,10 @@
                         android:textColor="@color/black"
                         android:text="Mi perfil"/>
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/ic_launcher_libre"/>
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/perfilround"/>
                     <TextView
                         android:layout_margin="5dp"
                         android:id="@+id/tvNameAdimin"
@@ -69,6 +70,13 @@
                         android:gravity="center"
                         android:text="Email"
                         android:textSize="@dimen/textSizeContent"/>
+                    <Button
+                        android:id="@+id/btnEditProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editarDatos"
+                        android:textStyle="bold"
+                        />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

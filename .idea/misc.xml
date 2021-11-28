@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/drawable/ic_baseline_insert_comment_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/drawable/ic_baseline_person_pin_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2203125" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.128125" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout-w936dp/activity_login.xml" value="0.11202185792349727" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/activity_login.xml" value="0.14855072463768115" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_admin.xml" value="0.22" />
-        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_admin_detail_dialog.xml" value="0.16" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_admin_detail_dialog.xml" value="0.2" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_coments.xml" value="0.22" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_commets_detail_dialog.xml" value="0.25" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
@@ -15,8 +22,11 @@
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/fragment_order_detail_dialog.xml" value="0.22" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/item_comment.xml" value="0.22" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/item_product.xml" value="0.33" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/item_product_load.xml" value="0.33" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/products_fragment.xml" value="0.2" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/layout/scores.xml" value="0.11775362318840579" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/menu/btnv_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
         <entry key="..\:/Users/USUARIO/Documents/MisionTic/Ciclo4/Proyecto/AgroLibre/app/src/main/res/mipmap-anydpi-v26/ic_launcher_libre.xml" value="0.2203125" />
       </map>
     </option>

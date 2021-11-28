@@ -14,29 +14,23 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imgProductItem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_libre_agro"
+            android:layout_height="50dp"
+            android:background="@color/placeholder_bg"
             />
-        <TextView
-            android:id="@+id/tvProductNameItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
-            android:text="Producto"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/textSizeNameProduct"/>
-        <TextView
-            android:id="@+id/tvProductPriceItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="normal"
+            android:background="@color/placeholder_bg"
+            android:gravity="center_horizontal"/>
+        <View
+            android:layout_width="100dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
-            android:text="$ 999.99"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/textSizePriceProduct"/>
+            android:background="@color/placeholder_bg"
+            android:gravity="center_horizontal"/>
 
     </LinearLayout>
 
