@@ -16,6 +16,8 @@
     <color name="secondaryDarkColor">#260e04</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#ffffff</color>
+    <color name="colorDanger">#ef233c</color>
+
 
     <color name="placeholder_bg">#dddddd</color>
 

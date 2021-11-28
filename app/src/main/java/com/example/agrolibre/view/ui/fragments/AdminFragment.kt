@@ -1,13 +1,18 @@
 package com.example.agrolibre.view.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.agrolibre.R
+import com.example.agrolibre.view.ui.activities.LoginActivity
+import com.firebase.ui.auth.AuthUI
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,8 +48,24 @@ class AdminFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnEditProfile = view.findViewById<Button>(R.id.btnEditProfile)
+        val btnExit = view.findViewById<Button>(R.id.btnExit)
+        val progress = view.findViewById<ProgressBar>(R.id.progressAdmin)
+        progress.visibility = View.GONE
         btnEditProfile?.setOnClickListener{
             findNavController().navigate(R.id.adminDetailFragmentDialog, null)
+        }
+        btnExit.setOnClickListener{
+            progress.visibility = View.VISIBLE
+            btnExit.isEnabled = false
+            AuthUI.getInstance().signOut(view.context).addOnSuccessListener {
+                startActivity(Intent(view.context, LoginActivity::class.java))
+                activity?.finish()
+
+            }.addOnFailureListener{
+                progress.visibility = View.GONE
+                btnExit.isEnabled = true
+                Toast.makeText(view.context, "Ocurrío un error ${it.message}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

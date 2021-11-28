@@ -43,7 +43,7 @@ class AdapterProducts(): RecyclerView.Adapter<AdapterProducts.ProductsViewHolder
         fun bindView(product: Product){
             Glide.with(itemView.context).load(product.imageUrl).into(itemView.findViewById(R.id.imgProductItem))
             itemView.findViewById<TextView>(R.id.tvProductNameItem).text = product.name
-            itemView.findViewById<TextView>(R.id.tvProductPriceItem).text = product.price.toString()
+            itemView.findViewById<TextView>(R.id.tvProductPriceItem).text = "$ "+product.price.toString()
         }
     }
 

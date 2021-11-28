@@ -1,32 +1,22 @@
 package com.example.agrolibre.view.ui.activities
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.agrolibre.R
 import com.example.agrolibre.databinding.ActivityLoginBinding
 import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.IdpResponse
 import com.google.android.gms.auth.api.Auth
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    val AUTH_REQUEST_CODE = 1234
-    lateinit var firebaseAuth: FirebaseAuth
-    lateinit var listener:FirebaseAuth.AuthStateListener
-    lateinit var providers: List<AuthUI.IdpConfig>
-
-
-    override fun onStart() {
-        super.onStart()
-        firebaseAuth.addAuthStateListener { listener }
-    }
-
-    override fun onStop() {
-        if(listener != null){
-            firebaseAuth.removeAuthStateListener { listener }
-        }
-        super.onStop()
+    companion object{
+        private  const val AUTH_REQUEST_CODE = 1234
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,27 +25,71 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        providers = arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
+        googleLogin()
+        phoneLogin()
+        emailLogin()
+    }
+    fun googleLogin(){
+        val providers = arrayListOf(
             AuthUI.IdpConfig.GoogleBuilder().build()
+            /*AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.PhoneBuilder().build(),*/
         )
-        //            AuthUI.IdpConfig.PhoneBuilder().build()
-        val intent = Intent(this, MainActivity::class.java)
-        firebaseAuth = FirebaseAuth.getInstance()
-        listener = FirebaseAuth.AuthStateListener { pO ->
-            val  user = pO.currentUser
-            if(user != null){
-                startActivity(intent)
-            }else{
-                startActivityForResult(AuthUI.getInstance()
+        binding.btnLoginGoogle.setOnClickListener{
+            startActivityForResult(
+                AuthUI.getInstance()
                     .createSignInIntentBuilder()
                     .setAvailableProviders(providers)
-                    .setLogo(R.mipmap.ic_launcher_libre)
-                    .setTheme(R.style.LoginTheme)
-                    .build(), AUTH_REQUEST_CODE
-                )
-            }
-
+                    .build(),AUTH_REQUEST_CODE)
         }
+    }
+    fun phoneLogin(){
+        val providers = arrayListOf(
+            AuthUI.IdpConfig.PhoneBuilder().build()
+            /*AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.PhoneBuilder().build(),*/
+        )
+        binding.btnPhone.setOnClickListener{
+            startActivityForResult(
+                AuthUI.getInstance()
+                    .createSignInIntentBuilder()
+                    .setAvailableProviders(providers)
+                    .build(),AUTH_REQUEST_CODE)
+        }
+    }
+    fun emailLogin(){
+        val providers = arrayListOf(
+            AuthUI.IdpConfig.EmailBuilder().build()
+            /*AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.PhoneBuilder().build(),*/
+        )
+        binding.btnEmail.setOnClickListener{
+            startActivityForResult(
+                AuthUI.getInstance()
+                    .createSignInIntentBuilder()
+                    .setAvailableProviders(providers)
+                    .build(),AUTH_REQUEST_CODE)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+
+        try {
+            if( requestCode == AUTH_REQUEST_CODE){
+                val response:IdpResponse? = IdpResponse.fromResultIntent(data)
+                if(resultCode == Activity.RESULT_OK){
+                    val user:FirebaseUser? = FirebaseAuth.getInstance().currentUser
+                    Toast.makeText(this, "Bienvenid@ ${user!!.displayName}", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }else{
+                    Toast.makeText(this, "Ocurrío un error ${response!!.error!!.errorCode}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }catch (e:Exception){
+            Toast.makeText(this, "Ocurrío un error", Toast.LENGTH_SHORT).show()
+        }
+
     }
 }

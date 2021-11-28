@@ -7,9 +7,11 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.agrolibre.R
 import com.example.agrolibre.databinding.ActivitySplashScreenBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
+    private val userAuth:FirebaseAuth by lazy { FirebaseAuth.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +22,12 @@ class SplashScreenActivity : AppCompatActivity() {
 
         val animation = AnimationUtils.loadAnimation(this,R.anim.animation)
         binding.imgSplashScreen.startAnimation(animation)
-        val intent = Intent(this, MainActivity::class.java)
+
+        var intent = if(userAuth.currentUser != null){
+            Intent(this, MainActivity::class.java)
+        }else{
+            Intent(this, LoginActivity::class.java)
+        }
 
         animation.setAnimationListener(object: Animation.AnimationListener{
             override fun onAnimationStart(p0: Animation?) {
