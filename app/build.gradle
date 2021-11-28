@@ -4,6 +4,9 @@ plugins {
 }
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-parcelize'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdk 31
 

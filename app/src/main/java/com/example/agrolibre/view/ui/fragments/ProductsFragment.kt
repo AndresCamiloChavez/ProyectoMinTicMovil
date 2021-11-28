@@ -1,5 +1,6 @@
 package com.example.agrolibre.view.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,13 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.agrolibre.R
 import com.example.agrolibre.databinding.ProductsFragmentBinding
+import com.example.agrolibre.model.Product
 import com.example.agrolibre.view.adapter.AdapterProducts
 import com.example.agrolibre.viewmodel.ProductsViewModel
 
-class ProductsFragment : Fragment() {
+class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
 
     companion object {
         fun newInstance() = ProductsFragment()
@@ -37,7 +41,7 @@ class ProductsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = AdapterProducts()
+        adapter = AdapterProducts(this)
         binding.rvProducts.layoutManager = GridLayoutManager(activity,2)
         binding.rvProducts.adapter = adapter
         observeData()
@@ -52,6 +56,15 @@ class ProductsFragment : Fragment() {
             adapter.setListData(it)
             adapter.notifyDataSetChanged()
         })
+    }
+
+    override fun onItemClick(item: Product) {
+        val action = ProductsFragmentDirections.actionProductsFragmentToOrderDetailFragmentDialog(item)
+        findNavController().navigate(action)
+
+    }
+
+    override fun onPriceClick() {
     }
 
     /*override fun onDestroy() {

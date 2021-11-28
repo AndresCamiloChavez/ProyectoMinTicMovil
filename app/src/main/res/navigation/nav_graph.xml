@@ -24,6 +24,18 @@
             app:destination="@id/adminDetailFragmentDialog" />
     </fragment>
     <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.agrolibre.view.ui.fragments.ProductsFragment"
+        android:label="products_fragment"
+        tools:layout="@layout/products_fragment" >
+        <action
+            android:id="@+id/action_productsFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
+            app:destination="@id/orderDetailFragmentDialog" />
+    </fragment>
+    <fragment
         android:id="@+id/commentsFragment"
         android:name="com.example.agrolibre.view.ui.fragments.ComentsFragment"
         android:label="fragment_coments"
@@ -36,18 +48,32 @@
             app:destination="@id/navCommentsDetailFragmentDialog" />
     </fragment>
 
-    <dialog
+  <!--  <dialog
         android:id="@+id/orderDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
         android:label="OrderDetailFragmentDialog"
         tools:layout="@layout/fragment_order_detail_dialog"
-        />
+        />-->
     <dialog
         android:id="@+id/navCommentsDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.CommetsDetailDialogFragment"
         android:label="CommentsDetailFragmentDialog"
         tools:layout="@layout/fragment_commets_detail_dialog"
         />
+
+    <fragment
+        android:id="@+id/orderDetailFragmentDialog"
+        android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
+        android:label="OrderDetailFragmentDialog"
+        tools:layout="@layout/fragment_order_detail_dialog">
+        <action
+            android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
+            app:destination="@id/productsFragment"
+            />
+        <argument
+            android:name="product"
+            app:argType="com.example.agrolibre.model.Product" />
+    </fragment>
     <fragment
         android:id="@+id/adminDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.AdminDetailDialogFragment"
@@ -58,17 +84,6 @@
             app:destination="@+id/adminDetailFragmentDialog"
             />
     </fragment>
-    <fragment
-        android:id="@+id/productsFragment"
-        android:name="com.example.agrolibre.view.ui.fragments.ProductsFragment"
-        android:label="products_fragment"
-        tools:layout="@layout/products_fragment" >
-        <action
-            android:id="@+id/action_productsFragment_to_commentsFragment"
-            app:destination="@id/commentsFragment" />
-        <action
-            android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
-            app:destination="@id/orderDetailFragmentDialog" />
-    </fragment>
+
 
 </navigation>
