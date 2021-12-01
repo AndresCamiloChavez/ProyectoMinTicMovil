@@ -48,7 +48,30 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <fragment
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginHorizontal="20dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"/>
+
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
 

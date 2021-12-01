@@ -47,11 +47,20 @@
                             android:text="Salir"/>
                     </LinearLayout>
 
+
+                    <!--<de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgAdmin"
+                        android:layout_width="200dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="200dp"
+                        android:src="@mipmap/ic_launcher"
+                        />-->
                     <ImageView
+                        android:id="@+id/imgAdmin"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/perfilround"/>
+                        android:src="@drawable/ic_launcher_libre"/>
                     <TextView
                         android:layout_margin="5dp"
                         android:id="@+id/tvNameAdimin"

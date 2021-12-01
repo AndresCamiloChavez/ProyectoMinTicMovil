@@ -22,7 +22,6 @@ class SplashScreenActivity : AppCompatActivity() {
 
         val animation = AnimationUtils.loadAnimation(this,R.anim.animation)
         binding.imgSplashScreen.startAnimation(animation)
-
         var intent = if(userAuth.currentUser != null){
             Intent(this, MainActivity::class.java)
         }else{

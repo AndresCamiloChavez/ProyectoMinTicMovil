@@ -28,6 +28,7 @@
         android:name="com.example.agrolibre.view.ui.fragments.ProductsFragment"
         android:label="products_fragment"
         tools:layout="@layout/products_fragment" >
+
         <action
             android:id="@+id/action_productsFragment_to_commentsFragment"
             app:destination="@id/commentsFragment" />
@@ -35,31 +36,41 @@
             android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
             app:destination="@id/orderDetailFragmentDialog" />
     </fragment>
+
+    <!--  <dialog
+          android:id="@+id/orderDetailFragmentDialog"
+          android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
+          android:label="OrderDetailFragmentDialog"
+          tools:layout="@layout/fragment_order_detail_dialog"
+          />-->
+
+
     <fragment
         android:id="@+id/commentsFragment"
-        android:name="com.example.agrolibre.view.ui.fragments.ComentsFragment"
+        android:name="com.example.agrolibre.view.ui.fragments.CommentsFragment"
         android:label="fragment_coments"
-        tools:layout="@layout/fragment_coments" >
+        tools:layout="@layout/comments_fragment" >
         <action
             android:id="@+id/action_comentsFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
         <action
-            android:id="@+id/action_comentsFragment_to_navCommentsDetailFragmentDialog"
-            app:destination="@id/navCommentsDetailFragmentDialog" />
+            android:id="@+id/action_commentsFragment_to_commentDetailFragment"
+            app:destination="@id/commentDetailFragment" />
+        <!-- <action
+             android:id="@+id/action_comentsFragment_to_navCommentsDetailFragmentDialog"
+             app:destination="@id/navCommentsDetailFragmentDialog" />-->
     </fragment>
-
-  <!--  <dialog
-        android:id="@+id/orderDetailFragmentDialog"
-        android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
-        android:label="OrderDetailFragmentDialog"
-        tools:layout="@layout/fragment_order_detail_dialog"
-        />-->
-    <dialog
+    <fragment
         android:id="@+id/navCommentsDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.CommetsDetailDialogFragment"
         android:label="CommentsDetailFragmentDialog"
         tools:layout="@layout/fragment_commets_detail_dialog"
-        />
+        >
+
+       <!-- <action
+            android:id="@+id/action_navCommentsDetailFragmentDialog_to_commentsFragment"
+            app:destination="@id/commentsFragment" />-->
+    </fragment>
 
     <fragment
         android:id="@+id/orderDetailFragmentDialog"
@@ -83,6 +94,15 @@
             android:id="@+id/action_adminFragment_to_adminDetailFragmentDialog"
             app:destination="@+id/adminDetailFragmentDialog"
             />
+    </fragment>
+    <fragment
+        android:id="@+id/commentDetailFragment"
+        android:name="com.example.agrolibre.view.ui.fragments.CommentDetailFragment"
+        android:label="comment_detail_fragment"
+        tools:layout="@layout/comment_detail_fragment" >
+        <action
+            android:id="@+id/action_commentDetailFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
     </fragment>
 
 

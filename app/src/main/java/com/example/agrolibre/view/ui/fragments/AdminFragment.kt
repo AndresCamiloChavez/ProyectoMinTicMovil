@@ -6,13 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.agrolibre.R
 import com.example.agrolibre.view.ui.activities.LoginActivity
 import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
+import de.hdodenhof.circleimageview.CircleImageView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +29,7 @@ class AdminFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private val userAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +52,17 @@ class AdminFragment : Fragment() {
         val btnEditProfile = view.findViewById<Button>(R.id.btnEditProfile)
         val btnExit = view.findViewById<Button>(R.id.btnExit)
         val progress = view.findViewById<ProgressBar>(R.id.progressAdmin)
+        val img = view.findViewById<ImageView>(R.id.imgAdmin)
+
+
+        if(userAuth.currentUser!!.photoUrl != null){
+            Glide.with(view.context).load(userAuth.currentUser!!.photoUrl).into(img)
+        }else{
+            Glide.with(view.context).load("https://cdn-icons-png.flaticon.com/512/149/149071.png").into(img)
+        }
+
+        view.findViewById<TextView>(R.id.tvNameAdimin).text = userAuth.currentUser!!.displayName
+
         progress.visibility = View.GONE
         btnEditProfile?.setOnClickListener{
             findNavController().navigate(R.id.adminDetailFragmentDialog, null)
