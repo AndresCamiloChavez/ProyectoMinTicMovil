@@ -19,7 +19,7 @@ class Repo {
             for(document: QueryDocumentSnapshot in it){
                 val imageUrl = document.getString("imageUrl")
                 val name = document.getString("name")
-                val price = document.getDouble("price")?.toFloat()
+                val price = document.getString("price")
                 val description = document.getString("description")
                 val product = Product(imageUrl!!, name!!, price!!, description!!)
                 listData.add(product)
@@ -52,6 +52,16 @@ class Repo {
         var succes = false
         try {
             FirebaseFirestore.getInstance().collection("Comments").add(comment)
+            succes  = true
+        }catch (e:Exception){
+            Log.d("Error", e.message.toString())
+        }
+        return succes
+    }
+    fun setProduct(product: Product):Boolean{
+        var succes = false
+        try {
+            FirebaseFirestore.getInstance().collection("products").add(product)
             succes  = true
         }catch (e:Exception){
             Log.d("Error", e.message.toString())

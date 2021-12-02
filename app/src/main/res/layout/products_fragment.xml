@@ -1,84 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.fragments.ProductsFragment">
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/shimmerViewContainer"
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toobarMenu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="280dp"
+        android:background="@color/primaryColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:contentScrim="@color/primaryLightColor"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="AgroLibre">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/agro" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_width="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"/>
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_width="200dp"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_width="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"/>
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_width="200dp"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_width="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"/>
-                <include layout="@layout/item_product_load"
-                    android:layout_height="200dp"
-                    android:layout_margin="12dp"
-                    android:layout_width="200dp"
-                    android:layout_weight="1"/>
-            </LinearLayout>
+                <include
+                    layout="@layout/load_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <include
+                    layout="@layout/load_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
 
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
-    </com.facebook.shimmer.ShimmerFrameLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvProducts"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    <!--<RelativeLayout
-        android:id="@+id/rlBaseOrder"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        &lt;!&ndash;        Tener presente el color white que está tapando todoo&ndash;&gt;
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:alpha="0.2"/>
-       &lt;!&ndash; <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>&ndash;&gt;
-    </RelativeLayout>-->
+    </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_add_camera"/>
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

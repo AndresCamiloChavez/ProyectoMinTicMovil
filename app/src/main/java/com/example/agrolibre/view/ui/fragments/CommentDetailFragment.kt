@@ -46,7 +46,7 @@ class CommentDetailFragment : Fragment() {
                 comment!!.userImageUrl = userAuth.currentUser!!.photoUrl.toString()
             }
             if (repo.setComment(comment!!)){
-                Snackbar.make(view,"¡Gracias por su opinión!",Snackbar.LENGTH_INDEFINITE).setAction("Aceptar",
+                Snackbar.make(view,"¡Gracias por su opinión!",Snackbar.LENGTH_LONG).setAction("Aceptar",
                     View.OnClickListener {
                         findNavController().navigate(R.id.commentsFragment)
                     }).show()

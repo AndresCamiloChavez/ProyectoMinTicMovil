@@ -2,10 +2,9 @@ package com.example.agrolibre.view.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -40,11 +39,17 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         adapter = AdapterProducts(this)
         binding.rvProducts.layoutManager = GridLayoutManager(activity,2)
         binding.rvProducts.adapter = adapter
         observeData()
+
+        binding.floatingAddProduct.setOnClickListener {
+            findNavController().navigate(R.id.addProductActivity)
+        }
+
+
+
     }
     //obtiene los datos del viewModel
     fun observeData(){
@@ -67,9 +72,19 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
     override fun onPriceClick() {
     }
 
-    /*override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }*/
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_top,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.mShop ->{
+                Toast.makeText(context, "hola",Toast.LENGTH_SHORT).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 }

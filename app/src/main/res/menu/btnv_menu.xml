@@ -7,7 +7,7 @@
         ></item>
     <item
         android:id="@+id/productsFragment"
-        android:title="Mi pedido"
+        android:title="Productos"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         ></item>
     <item

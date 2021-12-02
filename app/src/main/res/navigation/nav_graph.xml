@@ -56,21 +56,24 @@
         <action
             android:id="@+id/action_commentsFragment_to_commentDetailFragment"
             app:destination="@id/commentDetailFragment" />
+        <action
+            android:id="@+id/action_commentsFragment_to_addProductActivity"
+            app:destination="@id/addProductActivity" />
         <!-- <action
              android:id="@+id/action_comentsFragment_to_navCommentsDetailFragmentDialog"
              app:destination="@id/navCommentsDetailFragmentDialog" />-->
     </fragment>
-    <fragment
+ <!--   <fragment
         android:id="@+id/navCommentsDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.CommetsDetailDialogFragment"
         android:label="CommentsDetailFragmentDialog"
         tools:layout="@layout/fragment_commets_detail_dialog"
         >
 
-       <!-- <action
+       &lt;!&ndash; <action
             android:id="@+id/action_navCommentsDetailFragmentDialog_to_commentsFragment"
-            app:destination="@id/commentsFragment" />-->
-    </fragment>
+            app:destination="@id/commentsFragment" />&ndash;&gt;
+    </fragment>-->
 
     <fragment
         android:id="@+id/orderDetailFragmentDialog"
@@ -104,6 +107,11 @@
             android:id="@+id/action_commentDetailFragment_to_commentsFragment"
             app:destination="@id/commentsFragment" />
     </fragment>
+    <activity
+        android:id="@+id/addProductActivity"
+        android:name="com.example.agrolibre.view.ui.activities.AddProductActivity"
+        android:label="activity_add_product"
+        tools:layout="@layout/activity_add_product" />
 
 
 </navigation>
