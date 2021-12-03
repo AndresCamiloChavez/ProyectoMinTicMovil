@@ -4,7 +4,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textHome"><b>AgroLibre</b> es una aplicación móvil que te permite ver una gran variedad de productos <b>principalmente agrícolas</b>, de esta manera podemos contribuir con la compra de forma indirecta de productos 100% <b>locales</b> y ayudar a nuestros campesinos,
                             agricultores personas que trabajan arduamente, ya que son ellos el <b>motor</b> de nuestros alimentos.</string>
-    <string name="mi_mensaje">Hola <b>mundo</b>, me llamo <b>Pepe</b></string>
+    <string name="description">AgroLibre cuenta un inicio de sesión por el cual es posible registrarse usando una cuenta de <b>Google, número telefónico o un correo valido</b>,
+                            en la pantalla principal permite visualizar los productos que se encuentren en su base de datos <b>Firebase</b>, además permite subir productos con su nombre, descripción, precio y foto a su vez
+                            se puede <b>realizar comentarios</b> sobre la aplicación o producto especifico y
+                            ver lo que otras personas opinan también <b>cuenta con un perfil</b> manejando los datos localmente y por su puesto la ubicación de la tienda mediante el uso de API de <b>Google Maps</b>.</string>
     <string name="hintCommet">Ingrese comentario</string>
     <string name="textBtnComentario">Guardar comentario</string>
     <string name="name">Nombre</string>

@@ -69,7 +69,8 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
 
     }
 
-    override fun onPriceClick() {
+    override fun onPriceClick(item: Product) {
+        Toast.makeText(context, "se agregro producto ", Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -42,10 +42,9 @@
                             android:text="Mi perfil"/>
                         <Button
                             android:id="@+id/btnExit"
-                            android:theme="@style/BotonExit"
+                            style="?attr/materialButtonOutlinedStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="@style/Botonnuevo"
                             android:text="Salir"/>
                     </LinearLayout>
                     <ImageView

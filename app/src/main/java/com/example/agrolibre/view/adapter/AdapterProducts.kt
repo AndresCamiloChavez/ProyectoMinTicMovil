@@ -3,6 +3,7 @@ package com.example.agrolibre.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -17,7 +18,7 @@ class AdapterProducts( private val itemClickListener:onProductClickListener): Re
 
     interface onProductClickListener{
         fun onItemClick(item: Product)
-        fun onPriceClick()// para futura compra
+        fun onPriceClick(item: Product)// para futura compra
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
@@ -41,6 +42,9 @@ class AdapterProducts( private val itemClickListener:onProductClickListener): Re
 
             itemView.setOnClickListener{
                 itemClickListener.onItemClick(item)
+            }
+            itemView.findViewById<ImageButton>(R.id.btnShopProductItem).setOnClickListener {
+                itemClickListener.onPriceClick(item)
             }
             Glide.with(itemView.context).load(item.imageUrl).into(itemView.findViewById(R.id.imgProductItem))
             itemView.findViewById<TextView>(R.id.tvProductNameItem).text = item.name

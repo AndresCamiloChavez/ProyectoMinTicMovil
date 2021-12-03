@@ -50,6 +50,7 @@
             android:inputType="textMultiLine" />
         <Button
             android:id="@+id/btnSaveComment"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
