@@ -2,8 +2,9 @@
     <string name="app_name">AgroLibre</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="textHome">AgroLibre es una aplicación móvil que te permite ver una gran variedad de productos de campesinos,
-                            de está manera podemos ayudar a nuestro campensinos siendo el motor de los alimentos que consumimos</string>
+    <string name="textHome"><b>AgroLibre</b> es una aplicación móvil que te permite ver una gran variedad de productos <b>principalmente agrícolas</b>, de esta manera podemos contribuir con la compra de forma indirecta de productos 100% <b>locales</b> y ayudar a nuestros campesinos,
+                            agricultores personas que trabajan arduamente, ya que son ellos el <b>motor</b> de nuestros alimentos.</string>
+    <string name="mi_mensaje">Hola <b>mundo</b>, me llamo <b>Pepe</b></string>
     <string name="hintCommet">Ingrese comentario</string>
     <string name="textBtnComentario">Guardar comentario</string>
     <string name="name">Nombre</string>

@@ -15,15 +15,6 @@
             app:destination="@id/productsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/adminFragment"
-        android:name="com.example.agrolibre.view.ui.fragments.AdminFragment"
-        android:label="fragment_admin"
-        tools:layout="@layout/fragment_admin" >
-        <action
-            android:id="@+id/action_adminFragment_to_adminDetailFragmentDialog"
-            app:destination="@id/adminDetailFragmentDialog" />
-    </fragment>
-    <fragment
         android:id="@+id/productsFragment"
         android:name="com.example.agrolibre.view.ui.fragments.ProductsFragment"
         android:label="products_fragment"
@@ -36,82 +27,57 @@
             android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
             app:destination="@id/orderDetailFragmentDialog" />
     </fragment>
-
-    <!--  <dialog
-          android:id="@+id/orderDetailFragmentDialog"
-          android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
-          android:label="OrderDetailFragmentDialog"
-          tools:layout="@layout/fragment_order_detail_dialog"
-          />-->
-
-
     <fragment
         android:id="@+id/commentsFragment"
         android:name="com.example.agrolibre.view.ui.fragments.CommentsFragment"
         android:label="fragment_coments"
         tools:layout="@layout/comments_fragment" >
         <action
-            android:id="@+id/action_comentsFragment_to_adminFragment"
-            app:destination="@id/adminFragment" />
-        <action
             android:id="@+id/action_commentsFragment_to_commentDetailFragment"
             app:destination="@id/commentDetailFragment" />
         <action
             android:id="@+id/action_commentsFragment_to_addProductActivity"
             app:destination="@id/addProductActivity" />
-        <!-- <action
-             android:id="@+id/action_comentsFragment_to_navCommentsDetailFragmentDialog"
-             app:destination="@id/navCommentsDetailFragmentDialog" />-->
+        <action
+            android:id="@+id/action_commentsFragment_to_administratorFragment"
+            app:destination="@id/administratorFragment" />
+
     </fragment>
- <!--   <fragment
-        android:id="@+id/navCommentsDetailFragmentDialog"
-        android:name="com.example.agrolibre.view.ui.fragments.CommetsDetailDialogFragment"
-        android:label="CommentsDetailFragmentDialog"
-        tools:layout="@layout/fragment_commets_detail_dialog"
-        >
-
-       &lt;!&ndash; <action
-            android:id="@+id/action_navCommentsDetailFragmentDialog_to_commentsFragment"
-            app:destination="@id/commentsFragment" />&ndash;&gt;
-    </fragment>-->
-
-    <fragment
+    <dialog
         android:id="@+id/orderDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.OrderDetailDialogFragment"
         android:label="OrderDetailFragmentDialog"
         tools:layout="@layout/fragment_order_detail_dialog">
-        <action
-            android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
-            app:destination="@id/productsFragment"
-            />
         <argument
             android:name="product"
             app:argType="com.example.agrolibre.model.Product" />
-    </fragment>
-    <fragment
+    </dialog>
+
+
+    <dialog
         android:id="@+id/adminDetailFragmentDialog"
         android:name="com.example.agrolibre.view.ui.fragments.AdminDetailDialogFragment"
         android:label="AdminDetailFragmentDialog"
-        tools:layout="@layout/fragment_admin_detail_dialog">
-        <action
-            android:id="@+id/action_adminFragment_to_adminDetailFragmentDialog"
-            app:destination="@+id/adminDetailFragmentDialog"
-            />
-    </fragment>
-    <fragment
+        tools:layout="@layout/fragment_admin_detail_dialog"/>
+    <dialog
         android:id="@+id/commentDetailFragment"
         android:name="com.example.agrolibre.view.ui.fragments.CommentDetailFragment"
         android:label="comment_detail_fragment"
-        tools:layout="@layout/comment_detail_fragment" >
-        <action
-            android:id="@+id/action_commentDetailFragment_to_commentsFragment"
-            app:destination="@id/commentsFragment" />
-    </fragment>
+        tools:layout="@layout/comment_detail_fragment" />
     <activity
         android:id="@+id/addProductActivity"
         android:name="com.example.agrolibre.view.ui.activities.AddProductActivity"
         android:label="activity_add_product"
         tools:layout="@layout/activity_add_product" />
+    <fragment
+        android:id="@+id/administratorFragment"
+        android:name="com.example.agrolibre.view.ui.fragments.AdministratorFragment"
+        android:label="fragment_administrator"
+        tools:layout="@layout/fragment_administrator">
+        <action
+            android:id="@+id/action_administratorFragment_to_adminDetailFragmentDialog2"
+            app:destination="@id/adminDetailFragmentDialog" />
+    </fragment>
 
 
 </navigation>

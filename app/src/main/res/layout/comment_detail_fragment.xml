@@ -2,7 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragments.CommentDetailFragment">
 
     <LinearLayout
@@ -14,6 +15,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="@dimen/textSizeTitle"
+            android:fontFamily="@font/poppins"
             android:textStyle="bold"
             android:text="Mi comentario"/>
         <TextView
@@ -21,6 +23,8 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="20dp"
+            android:fontFamily="@font/poppins"
+
             android:layout_marginTop="@dimen/textSizeTitle"
             android:layout_gravity="center_horizontal"
             android:text="@string/calificacion"/>
@@ -37,6 +41,7 @@
             android:id="@+id/etCommetsContent"
             android:layout_width="match_parent"
             android:layout_height="127dp"
+            android:fontFamily="@font/poppins"
             android:layout_marginHorizontal="@dimen/textSizeTitle"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"

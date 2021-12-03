@@ -14,10 +14,11 @@ import com.example.agrolibre.databinding.CommentsFragmentBinding
 import com.example.agrolibre.domain.data.network.Repo
 import com.example.agrolibre.model.Comment
 import com.example.agrolibre.viewmodel.CommentDetailViewModel
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
-class CommentDetailFragment : Fragment() {
+class CommentDetailFragment : BottomSheetDialogFragment() {
 
     companion object {
         fun newInstance() = CommentDetailFragment()
@@ -50,6 +51,7 @@ class CommentDetailFragment : Fragment() {
                     View.OnClickListener {
                         findNavController().navigate(R.id.commentsFragment)
                     }).show()
+                findNavController().navigate(R.id.commentsFragment)
 
             }else{
                 Toast.makeText(activity, "Ocurrío un error intente de nuevo",Toast.LENGTH_SHORT).show()

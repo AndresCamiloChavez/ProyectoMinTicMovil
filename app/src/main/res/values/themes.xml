@@ -34,4 +34,13 @@
         <item name="colorControlNormal">@color/yellow</item>
         <item name="colorControlActivated">@color/yellow</item>
     </style>
+
+    <style name="BotonExit" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:background">#EA5146</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
 </resources>

@@ -2,7 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragments.OrderDetailDialogFragment">
 
@@ -50,12 +50,13 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Producto"
-
+                            android:fontFamily="@font/poppins"
                             android:textSize="@dimen/textSizeNameProduct"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvProductPriceOrderDetail"
+                            android:fontFamily="@font/poppins"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -64,13 +65,14 @@
 
                         <TextView
                             android:id="@+id/tvProductDescriptionOrderDetail"
+                            android:fontFamily="@font/poppins"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="10dp"
                             android:justificationMode="inter_word"
                             android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also"
-                            android:textSize="@dimen/textSizeContent" />
+                            android:textSize="15dp" />
 
 
                     </LinearLayout>

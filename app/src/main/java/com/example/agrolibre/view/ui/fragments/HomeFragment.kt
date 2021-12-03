@@ -5,15 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.agrolibre.R
 import com.example.agrolibre.databinding.FragmentHomeBinding
 import com.example.agrolibre.databinding.ProductsFragmentBinding
 import com.example.agrolibre.model.Ubication
+import com.example.agrolibre.viewmodel.ProductsViewModel
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+
+/*import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.Marker*/
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,8 +37,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
     private var _binding: FragmentHomeBinding? =null
     private val binding get() = _binding!!
-
+    private val viewModel by lazy{ ViewModelProvider(this).get(ProductsViewModel::class.java)}
     private lateinit var map: MapView
+    private val list = mutableListOf<CarouselItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,8 +53,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -58,10 +62,10 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         super.onViewCreated(view, savedInstanceState)
 
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-
+        dataCarousel()
         mapFragment.getMapAsync(this)
 
-        binding.mapView.setTileSource(TileSourceFactory.MAPNIK)
+       /* binding.mapView.setTileSource(TileSourceFactory.MAPNIK)
 
         val location = Ubication()
         val geoPoint = GeoPoint(location.latitude, location.longitude)
@@ -73,9 +77,25 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         marker.position = geoPoint
         marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         marker.title = "AgroLibre"
-        binding.mapView.overlays.add(marker)
+        binding.mapView.overlays.add(marker)*/
 
 
+    }
+
+    fun dataCarousel(){
+        viewModel.fetchProductsData().observe(viewLifecycleOwner, Observer {
+            for ( item in it){
+                list.add(
+                    CarouselItem(
+                        imageUrl = item.imageUrl,
+                        caption = item.name
+                    )
+                )
+            }
+            binding.carousel.setData(list)
+            binding.carousel.start()
+
+        })
     }
 
     companion object {

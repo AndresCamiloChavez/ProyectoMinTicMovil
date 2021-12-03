@@ -28,6 +28,7 @@
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:text="Producto"
+            android:fontFamily="@font/poppins"
             android:gravity="center_horizontal"
             android:textSize="@dimen/textSizeNameProduct"/>
         <TextView
@@ -35,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="normal"
+            android:fontFamily="@font/poppins"
             android:layout_gravity="center_horizontal"
             android:text="$ 999.99"
             android:gravity="center_horizontal"
