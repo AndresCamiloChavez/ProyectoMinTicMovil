@@ -43,9 +43,7 @@ class AdapterProducts( private val itemClickListener:onProductClickListener): Re
             itemView.setOnClickListener{
                 itemClickListener.onItemClick(item)
             }
-            itemView.findViewById<ImageButton>(R.id.btnShopProductItem).setOnClickListener {
-                itemClickListener.onPriceClick(item)
-            }
+
             Glide.with(itemView.context).load(item.imageUrl).into(itemView.findViewById(R.id.imgProductItem))
             itemView.findViewById<TextView>(R.id.tvProductNameItem).text = item.name
             itemView.findViewById<TextView>(R.id.tvProductPriceItem).text = "$ "+item.price.toString()

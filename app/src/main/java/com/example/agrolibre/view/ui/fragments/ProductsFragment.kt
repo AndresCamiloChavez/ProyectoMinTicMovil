@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -44,12 +45,12 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
         binding.rvProducts.adapter = adapter
         observeData()
 
-        binding.floatingAddProduct.setOnClickListener {
-            findNavController().navigate(R.id.addProductActivity)
+
+        binding.toolbar.inflateMenu(R.menu.menu_top)
+        binding.toolbar.setOnMenuItemClickListener {
+            findNavController().navigate(R.id.action_productsFragment_to_shopProductActivity)
+            true
         }
-
-
-
     }
     //obtiene los datos del viewModel
     fun observeData(){
@@ -71,20 +72,6 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
 
     override fun onPriceClick(item: Product) {
         Toast.makeText(context, "se agregro producto ", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_top,menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
-            R.id.mShop ->{
-                Toast.makeText(context, "hola",Toast.LENGTH_SHORT).show()
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
 

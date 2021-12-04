@@ -25,18 +25,6 @@
                 android:scaleType="center"
                 android:src="@mipmap/ic_launcher_libre_agro" />
 
-            <ImageButton
-                android:id="@+id/btnShopProductItem"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:background="#D2D3D1D1"
-                android:src="@drawable/ic_baseline_shopping_cart_24" />
         </RelativeLayout>
 
         <TextView

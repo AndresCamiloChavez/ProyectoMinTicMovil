@@ -14,16 +14,39 @@
         app:cardCornerRadius="@dimen/cardCornerRadius"
         android:layout_margin="20dp"
         >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressAdmin"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="match_parent"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgFotoPeril"
+                android:layout_width="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="200dp"
+                android:src="@drawable/noimage"/>
+            <Button
+                android:id="@+id/btnSubirFotoPeril"
+                android:theme="?attr/materialButtonToggleGroupStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher_libre"/>
+                android:layout_gravity="center_horizontal"
+                android:text="subir foto"
+                />
             <EditText
-                android:id="@+id/edNameAdmin"
+                android:id="@+id/etNameAdmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
@@ -31,8 +54,8 @@
                 android:inputType="text"
                 android:layout_gravity="center_horizontal"
                 />
-            <EditText
-                android:id="@+id/edAddressAdmin"
+           <!-- <EditText
+                android:id="@+id/etAddressAdmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/address"
@@ -41,7 +64,7 @@
                 android:layout_gravity="center_horizontal"
                 />
             <EditText
-                android:id="@+id/edPhoneAdmin"
+                android:id="@+id/etPhoneAdmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/phone"
@@ -50,16 +73,17 @@
                 android:layout_gravity="center_horizontal"
                 />
             <EditText
-                android:id="@+id/edEmailAdmin"
+                android:id="@+id/etEmailAdmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
                 android:layout_marginTop="15dp"
                 android:inputType="text"
                 android:layout_gravity="center_horizontal"
-                />
+                />-->
             <Button
-                android:id="@+id/btnSabeAdmin"
+                android:id="@+id/btnSaveAdmin"
+                android:layout_margin="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/saveAdmin"

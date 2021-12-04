@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_productsFragment_to_orderDetailFragmentDialog"
             app:destination="@id/orderDetailFragmentDialog" />
+        <action
+            android:id="@+id/action_productsFragment_to_shopProductActivity"
+            app:destination="@id/shopProductActivity" />
     </fragment>
     <fragment
         android:id="@+id/commentsFragment"
@@ -78,6 +81,11 @@
             android:id="@+id/action_administratorFragment_to_adminDetailFragmentDialog2"
             app:destination="@id/adminDetailFragmentDialog" />
     </fragment>
+    <activity
+        android:id="@+id/shopProductActivity"
+        android:name="com.example.agrolibre.view.ui.activities.ShopProductActivity"
+        android:label="activity_shop_product"
+        tools:layout="@layout/activity_shop_product" />
 
 
 </navigation>

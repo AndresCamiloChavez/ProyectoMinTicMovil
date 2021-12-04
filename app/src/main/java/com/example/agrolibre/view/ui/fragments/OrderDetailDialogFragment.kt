@@ -49,7 +49,7 @@ class OrderDetailDialogFragment : BottomSheetDialogFragment() {
         view.findViewById<TextView>(R.id.tvProductNameOrderDetail).text = producto.name
         Glide.with(view.context).load(producto.imageUrl).into(view.findViewById(R.id.imgProductImageDetail))
         view.findViewById<TextView>(R.id.tvProductDescriptionOrderDetail).text = producto.description
-        view.findViewById<TextView>(R.id.tvProductPriceOrderDetail).text = producto.price.toString()
+        view.findViewById<TextView>(R.id.tvProductPriceOrderDetail).text = "$ "+producto.price.toString()
         return view
     }
 

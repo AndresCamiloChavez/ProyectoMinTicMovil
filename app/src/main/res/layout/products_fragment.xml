@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.fragments.ProductsFragment">
 
+
+
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toobarMenu"
         android:layout_width="match_parent"
@@ -38,39 +42,43 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <com.facebook.shimmer.ShimmerFrameLayout
-                android:id="@+id/shimmerViewContainer"
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <include
-                    layout="@layout/load_item"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerViewContainer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-                <include
-                    layout="@layout/load_item"
+                    android:layout_height="match_parent">
+
+                    <include
+                        layout="@layout/load_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <include
+                        layout="@layout/load_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProducts"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
 
-            </com.facebook.shimmer.ShimmerFrameLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvProducts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 

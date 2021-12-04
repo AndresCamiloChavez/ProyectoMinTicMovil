@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragments.AdministratorFragment">
 
-    <ScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshAdmin"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -63,7 +64,7 @@
                         android:gravity="center"
                         android:textSize="@dimen/textSizePriceProduct"
                         android:text="Nombre"/>
-                    <TextView
+                   <!-- <TextView
                         android:fontFamily="@font/poppins"
 
                         android:layout_margin="5dp"
@@ -82,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Teléfono"
-                        android:textSize="@dimen/textSizeContent"/>
+                        android:textSize="@dimen/textSizeContent"/>-->
                     <TextView
                         android:fontFamily="@font/poppins"
 
@@ -104,7 +105,7 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
