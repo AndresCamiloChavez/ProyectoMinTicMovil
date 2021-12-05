@@ -23,7 +23,7 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Botonnuevo" parent="Theme.MaterialComponents.DayNight">
-        <item name="android:background">#39008e</item>
+        <item name="android:background">#FFEB3B</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#FFF</item>
         <item name="android:textAllCaps">true</item>

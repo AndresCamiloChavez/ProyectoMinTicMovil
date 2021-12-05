@@ -71,7 +71,16 @@ class Repo {
         }
         return succes
     }
-
+    fun setImageProfile(uri: Uri): Boolean {
+        var succes = false
+        try {
+            FirebaseFirestore.getInstance().collection("users").add(uri)
+            succes = true
+        } catch (e: Exception) {
+            Log.d("Error", e.message.toString())
+        }
+        return succes
+    }
 }
 
 //FirebaseFirestore.getInstance().collection("Comments").add(comment)

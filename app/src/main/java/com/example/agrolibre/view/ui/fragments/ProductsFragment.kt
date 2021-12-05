@@ -45,11 +45,14 @@ class ProductsFragment : Fragment(), AdapterProducts.onProductClickListener {
         binding.rvProducts.adapter = adapter
         observeData()
 
-
         binding.toolbar.inflateMenu(R.menu.menu_top)
         binding.toolbar.setOnMenuItemClickListener {
             findNavController().navigate(R.id.action_productsFragment_to_shopProductActivity)
             true
+        }
+
+        binding.floatingAddProduct.setOnClickListener {
+            findNavController().navigate(R.id.addProductActivity)
         }
     }
     //obtiene los datos del viewModel
