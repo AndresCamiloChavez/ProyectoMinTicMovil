@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_libre"
+        android:icon="@mipmap/ic_launcher_pammi"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_libre"
+        android:roundIcon="@mipmap/ic_launcher_pammi"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroLibre">
         <activity

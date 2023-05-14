@@ -61,9 +61,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+//        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         dataCarousel()
-        mapFragment.getMapAsync(this)
+//        mapFragment.getMapAsync(this)
 
        /* binding.mapView.setTileSource(TileSourceFactory.MAPNIK)
 

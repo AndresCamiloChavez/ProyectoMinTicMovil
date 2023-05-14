@@ -5,16 +5,16 @@
         android:title="Inicio"
         android:icon="@drawable/ic_baseline_home_24"
         ></item>
-    <item
-        android:id="@+id/productsFragment"
-        android:title="Productos"
-        android:icon="@drawable/ic_baseline_shopping_cart_24"
-        ></item>
-    <item
-        android:id="@+id/commentsFragment"
-        android:title="Comentarios"
-        android:icon="@drawable/ic_baseline_insert_comment_24"
-        ></item>
+<!--    <item-->
+<!--        android:id="@+id/productsFragment"-->
+<!--        android:title="Servicios"-->
+<!--        android:icon="@drawable/ic_work"-->
+<!--        ></item>-->
+<!--    <item-->
+<!--        android:id="@+id/commentsFragment"-->
+<!--        android:title="Comentarios"-->
+<!--        android:icon="@drawable/ic_baseline_insert_comment_24"-->
+<!--        ></item>-->
     <item
         android:id="@+id/administratorFragment"
         android:title="Mi cuenta"
