@@ -49,13 +49,7 @@ class LoginActivity : AppCompatActivity() {
             /*AuthUI.IdpConfig.EmailBuilder().build(),
             AuthUI.IdpConfig.PhoneBuilder().build(),*/
         )
-        binding.btnPhone.setOnClickListener{
-            startActivityForResult(
-                AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setAvailableProviders(providers)
-                    .build(),AUTH_REQUEST_CODE)
-        }
+
     }
     fun emailLogin(){
         val providers = arrayListOf(
@@ -63,13 +57,7 @@ class LoginActivity : AppCompatActivity() {
             /*AuthUI.IdpConfig.EmailBuilder().build(),
             AuthUI.IdpConfig.PhoneBuilder().build(),*/
         )
-        binding.btnEmail.setOnClickListener{
-            startActivityForResult(
-                AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setAvailableProviders(providers)
-                    .build(),AUTH_REQUEST_CODE)
-        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
