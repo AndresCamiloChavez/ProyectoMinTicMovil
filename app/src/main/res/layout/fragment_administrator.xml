@@ -53,7 +53,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/ic_launcher_libre"/>
+                        android:src="@mipmap/ic_launcher_pammi"/>
                     <TextView
                         android:layout_margin="5dp"
                         android:id="@+id/tvNameAdimin"
